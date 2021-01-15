@@ -1,7 +1,8 @@
 #include<iostream>
 
 using namespace std;
-
+template <typename Nametype>
+void mySwap(Nametype &,Nametype &);
 int main(){
 	int x, y;
 	string a, b;
@@ -30,3 +31,11 @@ int main(){
 	return 0;
 }
 
+template <typename Nametype>
+void mySwap(Nametype &x,Nametype &y)
+{
+	Nametype temp;
+	temp = x;
+	x = y;
+	y = temp;
+}
